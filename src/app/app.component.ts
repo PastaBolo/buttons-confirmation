@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onConfirmationNeeded(e): void { console.log(e); }
-  onConfirm(): void { console.log('onConfirm'); }
-  onCancel(): void { console.log('onCancel'); }
+  quantity: number = 5
+
+  onConfirmationAsked(confirmationAsked): void {
+    console.log('confirmationAsked : ' + confirmationAsked)
+  }
+  onConfirm(): void {
+    console.log('onConfirm')
+  }
+  onCancel(): void {
+    console.log('onCancel')
+  }
 }

@@ -1,7 +1,7 @@
-<div *ngIf="!needConfirmation" (click)="needConfirmation = true; confirmationNeeded.emit(true)">
+<div *ngIf="!confirmationNeeded" (click)="askConfirmation(true)">
   <ng-content></ng-content>
 </div>
-<div *ngIf="needConfirmation" class="confirmation-buttons">
-  <button (click)="needConfirmation = false; confirmationNeeded.emit(false); cancel.emit(null)">Annuler</button>
-  <button (click)="needConfirmation = false; confirmationNeeded.emit(false); confirm.emit(null)">Confirmer</button>
+<div *ngIf="confirmationNeeded" class="confirmation-buttons">
+  <button (click)="askConfirmation(false); cancel.emit(null)">Annuler</button>
+  <button (click)="askConfirmation(false); confirm.emit(null)">Confirmer</button>
 </div>

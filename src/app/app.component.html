@@ -1,4 +1,10 @@
 <h1>Buttons confirmation</h1>
-<app-buttons-confirmation (confirmationNeeded)="onConfirmationNeeded($event)" (confirm)="onConfirm()" (cancel)="onCancel()">
+<app-buttons-confirmation (confirmationAsked)="onConfirmationAsked($event)" (confirm)="onConfirm()" (cancel)="onCancel()">
   <button>Action</button>
 </app-buttons-confirmation>
+<hr>
+<h3>
+  Two-way binding
+</h3>
+<app-two-way-binding [(quantity)]="quantity"></app-two-way-binding>
+{{ quantity | json}}
