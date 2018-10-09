@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  onConfirmationNeeded(e): void { console.log(e); }
+  onConfirm(): void { console.log('onConfirm'); }
+  onCancel(): void { console.log('onCancel'); }
 }
